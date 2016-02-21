@@ -35,13 +35,18 @@ instr 2
 
 kcutoff = 6000
 kresonance = .2
+kfeedback = p4
 
+adel linseg 0, p3*.7, 0.02, p3*.7, 0	;max delay time =20ms
 
 a1 moogladder ga1, kcutoff, kresonance
-
+aflg flanger ga1, adel, kfeedback
 aL, aR reverbsc a1, a1, .72, 5000
 
-outs aL, aR
+aflgout clip aflg, 1,1
+
+
+outs aL+aflgout, aR+aflgout
 
 ga1 = 0
 

@@ -5,6 +5,8 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/InstrumentList" />
+        android:id="@+id/InstrumentList"
+        android:listSelector="@drawable/bg_key"
+        />
 
 </LinearLayout>
