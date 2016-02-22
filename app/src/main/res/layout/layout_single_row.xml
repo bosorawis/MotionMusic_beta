@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="5dp">
 
 
     <ImageView
@@ -14,9 +15,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Delay"
+        android:text="Effect"
         android:id="@+id/effect_text_view"
-        android:layout_alignBottom="@+id/effect_image_view"
+        style="@style/AppTheme"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/effect_image_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Description"
+        android:id="@+id/effect_description_view"
+        android:layout_below="@+id/effect_text_view"
         android:layout_toEndOf="@+id/effect_image_view" />
 
 </RelativeLayout>

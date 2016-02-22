@@ -24,35 +24,40 @@
         android:layout_height="wrap_content"
         android:text="Up-Down"
         android:id="@+id/rh_up_down_btn"
-        android:layout_gravity="center_horizontal|top" />
+        android:layout_gravity="center_horizontal|top"
+        android:backgroundTint="#D4A490"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="turn"
+        android:text="Roll"
         android:id="@+id/rh_turn_btn"
-        android:layout_gravity="right|top" />
+        android:layout_gravity="right|top"
+        android:backgroundTint="#CED490"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Left-Right"
         android:id="@+id/rh_left_right_btn"
-        android:layout_gravity="right|center_vertical" />
+        android:layout_gravity="right|center_vertical"
+        android:backgroundTint="#90C0D4"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="tilt"
+        android:text="Pitch"
         android:id="@+id/rh_tilt_btn"
-        android:layout_gravity="left|top" />
+        android:layout_gravity="left|top"
+        android:backgroundTint="#CC90D4"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fw-back"
         android:id="@+id/rh_fw_back_btn"
-        android:layout_gravity="left|center_vertical" />
+        android:layout_gravity="left|center_vertical"
+        android:backgroundTint="#A1D490"/>
 
 </FrameLayout>
