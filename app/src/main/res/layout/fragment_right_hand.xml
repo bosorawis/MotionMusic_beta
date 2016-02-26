@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="complexability.motionmusicv2.RightHandFragment">
 
 
@@ -33,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pitch"
-            android:id="@+id/rh_tilt_btn"
+            android:id="@+id/rh_pitch_btn"
             android:layout_gravity="left|top"
             android:backgroundTint="#CC90D4"
             android:layout_alignParentTop="true"
@@ -73,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Roll"
-            android:id="@+id/rh_turn_btn"
+            android:id="@+id/rh_roll_btn"
             android:layout_gravity="right|top"
             android:backgroundTint="#CED490"
             android:layout_alignParentTop="true"
@@ -94,7 +95,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/pitchText"
-            android:layout_below="@+id/rh_tilt_btn"
+            android:layout_below="@+id/rh_pitch_btn"
             android:layout_alignParentStart="true" />
 
         <TextView
@@ -130,7 +131,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/rollText"
-            android:layout_below="@+id/rh_turn_btn"
+            android:layout_below="@+id/rh_roll_btn"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
