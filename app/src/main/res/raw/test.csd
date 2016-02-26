@@ -14,15 +14,17 @@ instr 1
 
 itie tival
 i_instanceNum = p4
-S_testName sprintf "testValue.%d", i_instanceNum
+S_freq sprintf "frequency_mod.%d", i_instanceNum
+S_vol sprintf "volume_mod.%d", i_instanceNum
 
-kx chnget S_testName
+kfreq chnget S_freq
+kvol chnget S_vol
 
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
 
 ;a1 oscil3 .8, 220+kx , 1
-a1 vco2 .5 * kenv, 60 + (log(1 - kx) * 3000), 0
+a1 vco2 kvol*.5 * kenv, 60 + (log(1 - kfreq) * 3000), 0
 
 ga1 = ga1 + a1
 
