@@ -12,58 +12,63 @@
     tools:context="complexability.motionmusicv2.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TestButton"
-        android:id="@+id/testButton"
-        android:layout_below="@+id/onOffButton"
-        android:layout_alignStart="@+id/checkVal" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bluetooth"
-        android:id="@+id/checkVal"
-        android:layout_below="@+id/testButton"
-        android:layout_alignParentEnd="true" />
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toStartOf="@+id/checkVal">
+        android:layout_toStartOf="@+id/testButton"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/testButton"
+        android:layout_alignParentEnd="true">
 
         <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:name="complexability.motionmusicv2.LeftHandFragment"
             android:id="@+id/fragment"
             tools:layout="@layout/fragment_left_hand"
             android:layout_alignTop="@+id/onOffButton"
             android:layout_alignParentStart="true"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical" />
+            android:layout_weight="1" />
 
         <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:name="complexability.motionmusicv2.RightHandFragment"
             android:id="@+id/fragment2"
             android:layout_toStartOf="@+id/testButton"
             android:layout_alignTop="@+id/testButton"
             android:layout_above="@+id/testButton"
-            android:layout_weight="1"
             tools:layout="@layout/fragment_right_hand"
-            android:layout_gravity="center_vertical" />
+            android:layout_weight="1" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestButton"
+        android:id="@+id/testButton"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New ToggleButton"
         android:id="@+id/onOffButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/testButton"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/testButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth"
+        android:id="@+id/checkVal"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/testButton" />
+
 </RelativeLayout>

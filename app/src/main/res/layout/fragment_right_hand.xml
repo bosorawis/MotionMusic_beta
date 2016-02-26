@@ -5,59 +5,133 @@
     tools:context="complexability.motionmusicv2.RightHandFragment">
 
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:id="@+id/imageView2"
-        android:layout_gravity="center"
-        android:src="@drawable/right_hand" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|bottom">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Instrument"
-        android:id="@+id/rh_instrument_btn"
-        android:layout_gravity="center" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fw-back"
+            android:id="@+id/rh_fw_back_btn"
+            android:layout_gravity="left|center_vertical"
+            android:backgroundTint="#A1D490"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Up-Down"
-        android:id="@+id/rh_up_down_btn"
-        android:layout_gravity="center_horizontal|top"
-        android:backgroundTint="#D4A490"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/fwBackText"
+            android:layout_below="@+id/rh_fw_back_btn"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Roll"
-        android:id="@+id/rh_turn_btn"
-        android:layout_gravity="right|top"
-        android:backgroundTint="#CED490"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pitch"
+            android:id="@+id/rh_tilt_btn"
+            android:layout_gravity="left|top"
+            android:backgroundTint="#CC90D4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Left-Right"
-        android:id="@+id/rh_left_right_btn"
-        android:layout_gravity="right|center_vertical"
-        android:backgroundTint="#90C0D4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrument"
+            android:id="@+id/rh_instrument_btn"
+            android:layout_gravity="center"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignStart="@+id/rh_up_down_btn" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pitch"
-        android:id="@+id/rh_tilt_btn"
-        android:layout_gravity="left|top"
-        android:backgroundTint="#CC90D4"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up-Down"
+            android:id="@+id/rh_up_down_btn"
+            android:layout_gravity="center_horizontal|top"
+            android:backgroundTint="#D4A490"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="fw-back"
-        android:id="@+id/rh_fw_back_btn"
-        android:layout_gravity="left|center_vertical"
-        android:backgroundTint="#A1D490"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left-Right"
+            android:id="@+id/rh_left_right_btn"
+            android:layout_gravity="right|center_vertical"
+            android:backgroundTint="#90C0D4"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll"
+            android:id="@+id/rh_turn_btn"
+            android:layout_gravity="right|top"
+            android:backgroundTint="#CED490"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/rh_left_right_btn" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center"
+            android:src="@drawable/right_hand"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/pitchText"
+            android:layout_below="@+id/rh_tilt_btn"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/upDownText"
+            android:layout_below="@+id/rh_up_down_btn"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/instText"
+            android:layout_below="@+id/rh_instrument_btn"
+            android:layout_alignStart="@+id/rh_instrument_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/leftRightText"
+            android:layout_below="@+id/rh_left_right_btn"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/rollText"
+            android:layout_below="@+id/rh_turn_btn"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 
 </FrameLayout>
