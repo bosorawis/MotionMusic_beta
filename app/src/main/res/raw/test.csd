@@ -18,7 +18,7 @@ S_freq sprintf "frequency_mod.%d", i_instanceNum
 S_vol sprintf "volume_mod.%d", i_instanceNum
 
 kfreq chnget S_freq
-kvol chnget S_volq
+kvol chnget S_vol
 
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
