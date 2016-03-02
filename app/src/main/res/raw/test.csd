@@ -14,6 +14,7 @@ instr 1
 
 itie tival
 i_instanceNum = p4
+
 S_freq sprintf "frequency_mod.%d", i_instanceNum
 S_vol sprintf "volume_mod.%d", i_instanceNum
 
