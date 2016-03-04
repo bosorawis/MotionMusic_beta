@@ -136,7 +136,6 @@ public class CsoundObj {
 
 	public void addBinding(CsoundBinding binding) {
 		if (!stopped) {
-			Log.d("CsoundObj","addBinding");
 			binding.setup(this);
 		}
 		synchronized (mLock) {
