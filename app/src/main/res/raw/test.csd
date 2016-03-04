@@ -23,34 +23,47 @@ kvol chnget S_vol
 
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
+kfinalfreq port kfreq, 0.01
 
 ;a1 oscil3 .8, 220+kx , 1
-a1 vco2 kvol*.5 * kenv, 60 + (log(1 - kfreq) * 3000), 0
+a1 vco2 kvol*.5 * kenv, 60 + (log(1 - kfinalfreq) * 3000), 0
 
 ga1 = ga1 + a1
 
 endin
 
 instr 2
+i_instanceNum = p4
 
-;kcutoff chnget "cutoff"
-;kresonance chnget "resonance"
+S_flanger sprintf "flanger_mod.%d", i_instanceNum
+S_reverb sprintf "reverb_mod.%d", i_instanceNum
+
+
+
+kflanger chnget S_flanger
+kreverb chnget S_reverb
+
 
 kcutoff = 6000
 kresonance = .2
-kfeedback = p4
 
-adel linseg 0, p3*.7, 0.02, p3*.7, 0	;max delay time =20ms
-
+;Low pass filter
 a1 moogladder ga1, kcutoff, kresonance
-aflg flanger ga1, adel, kfeedback
-aL, aR reverbsc a1, a1, .72, 5000
 
+
+;Flanger
+kfeedback = p4
+adel linseg 0, p3*.7, 0.02 , p3*.7, 0	;max delay time =20ms
+aflg flanger ga1, adel, kreverb
 aflgout clip aflg, 1,1
+
+;Reverb
+aL, aR reverbsc a1, a1, kreverb, 5000
+
 
 
 outs aL+aflgout, aR+aflgout
-
+;outs aL, aR
 ga1 = 0
 
 endin
