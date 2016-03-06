@@ -12,7 +12,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="fw-back"
+            android:text="Y-Axis"
             android:id="@+id/lh_fw_back_btn"
             android:layout_gravity="left|center_vertical"
             android:backgroundTint="#A1D490"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/fwBackText"
+            android:id="@+id/l_fwBackText"
             android:layout_below="@+id/lh_fw_back_btn"
             android:layout_alignParentStart="true" />
 
@@ -42,7 +42,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Up-Down"
+            android:text="Z-Axis"
             android:id="@+id/lh_up_down_btn"
             android:layout_gravity="center_horizontal|top"
             android:backgroundTint="#D4A490"
@@ -52,7 +52,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Left-Right"
+            android:text="X-Axis"
             android:id="@+id/lh_left_right_btn"
             android:layout_gravity="right|center_vertical"
             android:backgroundTint="#90C0D4"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/pitchText"
+            android:id="@+id/l_pitchText"
             android:layout_below="@+id/lh_pitch_btn"
             android:layout_alignParentStart="true" />
 
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/upDownText"
+            android:id="@+id/l_upDownText"
             android:layout_below="@+id/lh_up_down_btn"
             android:layout_centerHorizontal="true" />
 
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/leftRightText"
+            android:id="@+id/l_leftRightText"
             android:layout_below="@+id/lh_left_right_btn"
             android:layout_alignParentEnd="true" />
 
@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/rollText"
+            android:id="@+id/l_rollText"
             android:layout_below="@+id/lh_roll_btn"
             android:layout_alignParentEnd="true" />
     </RelativeLayout>

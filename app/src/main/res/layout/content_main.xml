@@ -16,9 +16,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toStartOf="@+id/testButton"
+        android:layout_toStartOf="@+id/instrButton"
         android:id="@+id/linearLayout"
-        android:layout_above="@+id/testButton"
+        android:layout_above="@+id/instrButton"
         android:layout_alignParentEnd="true">
 
         <fragment
@@ -36,9 +36,9 @@
             android:layout_height="match_parent"
             android:name="complexability.motionmusicv2.RightHandFragment"
             android:id="@+id/fragment2"
-            android:layout_toStartOf="@+id/testButton"
-            android:layout_alignTop="@+id/testButton"
-            android:layout_above="@+id/testButton"
+            android:layout_toStartOf="@+id/instrButton"
+            android:layout_alignTop="@+id/instrButton"
+            android:layout_above="@+id/instrButton"
             tools:layout="@layout/fragment_right_hand"
             android:layout_weight="1" />
     </LinearLayout>
@@ -46,8 +46,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TestButton"
-        android:id="@+id/testButton"
+        android:text="Instrument"
+        android:id="@+id/instrButton"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -60,7 +60,7 @@
         android:checked="false"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/testButton" />
+        android:layout_toEndOf="@+id/instrButton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -69,6 +69,6 @@
         android:id="@+id/checkVal"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/testButton" />
+        android:layout_toStartOf="@+id/instrButton" />
 
 </RelativeLayout>
