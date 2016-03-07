@@ -47,6 +47,7 @@
             android:id="@+id/rh_instrument_btn"
             android:layout_gravity="center"
             android:layout_below="@+id/imageView2"
+            android:backgroundTint="#767873"
             android:layout_alignStart="@+id/rh_up_down_btn" />
 
         <Button
