@@ -50,7 +50,7 @@
         android:id="@+id/testButton"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/onOffButton" />
 
     <ToggleButton
         android:layout_width="wrap_content"
@@ -60,15 +60,6 @@
         android:checked="false"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/testButton" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bluetooth"
-        android:id="@+id/checkVal"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/testButton" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
