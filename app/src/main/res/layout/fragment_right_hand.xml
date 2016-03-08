@@ -9,7 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="right|bottom">
+        android:layout_gravity="right|bottom"
+        android:background="#FFB055">
 
         <Button
             android:layout_width="wrap_content"

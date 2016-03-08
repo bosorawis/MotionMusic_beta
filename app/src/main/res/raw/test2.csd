@@ -9,21 +9,26 @@ ksmps=32
 sr = 44100
 
 ga1 init 0
-
 instr 1
 
 itie tival
 i_instanceNum = p4
-S_xName sprintf "touch.%d.x", i_instanceNum
-S_yName sprintf "touch.%d.y", i_instanceNum
 
-kx chnget S_xName
-ky chnget S_yName
+S_freq sprintf "frequency_mod.%d", i_instanceNum
+S_vol sprintf "volume_mod.%d", i_instanceNum
+S_vibrato sprintf "vibrato_mod.%d", i_instanceNum
 
-kenv linsegr 0, .001, 1, .1, 1, .25, 0
-a1 vco2 ky * .5 * kenv, 60 + (log(1 - kx) * 3000), 0
+kfreq chnget S_freq
+kvol chnget S_vol
+kvib chnget S_vibrato
 
-ga1 = ga1 + a1
+
+kampmod oscil 200, kvib, 1
+aout oscil kvol, 440+kampmod, 1
+aenv adsr 0.2, 1, 1, 0.2
+
+ga1 = ga1+(aout*aenv)
+
 
 endin
 
@@ -36,11 +41,11 @@ kcutoff = 6000
 kresonance = .2
 
 
-a1 moogladder ga1, kcutoff, kresonance
+;a1 moogladder ga1, kcutoff, kresonance
 
-aL, aR reverbsc a1, a1, .72, 5000
+;aL, aR reverbsc a1, a1, .72, 5000
 
-outs aL, aR
+outs ga1, ga1
 
 ga1 = 0
 
@@ -52,7 +57,7 @@ endin
 f1 0 16384 10 1
 
 i2 0 360000
-
+ 
 </CsScore>
 </CsoundSynthesizer>
 
