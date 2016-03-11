@@ -23,7 +23,7 @@ kfreq chnget S_freq
 kvol chnget S_vol
 kvib chnget S_vibrato
 
-kfreqmod oscil 400, 4*kvib, 1
+kfreqmod oscil 400, 4*kvib*10, 1
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
 

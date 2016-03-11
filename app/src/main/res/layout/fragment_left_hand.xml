@@ -115,6 +115,26 @@
             android:id="@+id/l_rollText"
             android:layout_below="@+id/lh_roll_btn"
             android:layout_alignParentEnd="true" />
+        <!--
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrument"
+            android:id="@+id/left_instrument"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_below="@+id/imageView2"
+            android:backgroundTint="#767873"
+            android:layout_alignStart="@+id/l_upDownText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/leftInstrumentTxt"
+            android:layout_below="@+id/left_instrument"
+            android:layout_centerHorizontal="true" />
+           -->
     </RelativeLayout>
 
 
