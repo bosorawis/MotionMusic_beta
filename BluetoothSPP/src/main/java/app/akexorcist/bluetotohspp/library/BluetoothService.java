@@ -355,6 +355,7 @@ public class BluetoothService {
             while (true) {
                 try {
                     int data = mmInStream.read();
+                    //Log.d("Data",String.format("value = %x",data));
                     if(data == 0x0A) {
                         //Log.d("Data", "Begin Package");
                     } else if(data == 0x0D) {
@@ -370,7 +371,6 @@ public class BluetoothService {
                         mHandler.obtainMessage(BluetoothState.MESSAGE_READ, buffer.length, -1, buffer).sendToTarget();
                         arr_byte = new ArrayList<Integer>();
                     } else {
-                        //Log.d("Data",String.format("value = %x",data));
                         arr_byte.add(data);
                     }
                 } catch (IOException e) {

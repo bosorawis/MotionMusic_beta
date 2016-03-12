@@ -25,14 +25,16 @@ kvib chnget S_vibrato
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
 kportfreq port kfreq, 0.01
-kvibrato vibr 500, kvib, 1
+kportvol port kvol, 0.01
 
-ainst vco2 kvol*.5 * kenv, kvibrato+ 60 + (log(1-kportfreq) * 3000), 0
+kvibrato vibr 500, kvib*10, 1
+
+ainst vco2 kportvol*.1 * kenv, 60 + (log(1-kportfreq) * 3000)+ kvibrato, 0
 ;a1 vco2 kvol*.5 * kenv, 10000 , 0
 
-gifn	ftgen	0,0, 257, 9, .5,1,270
+;gifn	ftgen	0,0, 257, 9, .5,1,270
 
-adist distort ainst, 1, gifn
+;adist distort ainst, 1, gifn
 
 
 ga1 = ga1 + ainst

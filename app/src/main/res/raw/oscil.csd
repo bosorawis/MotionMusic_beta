@@ -23,11 +23,14 @@ kfreq chnget S_freq
 kvol chnget S_vol
 kvib chnget S_vibrato
 
-kfreqmod oscil 400, 4*kvib*10, 1
+kportfreq port kfreq, 0.01
+kportvol port kvol, 0.01
+
+kfreqmod oscil 400, 4*kvib, 1
 
 kenv linsegr 0, .001, 1, .1, 1, .25, 0
 
-a1 oscil kvol*kenv*1.5, 100+440*kfreq*2 + kfreqmod, 1
+a1 oscil kportvol*kenv, 100+440*kportfreq*2 + kfreqmod, 1
 aenv adsr 0.2, 1, 1, 0.2
 
 ga1 = ga1 + (a1*aenv)
