@@ -62,4 +62,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Data"
+        android:id="@+id/logSwitch"
+        android:layout_alignBottom="@+id/testButton"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:checked="false" />
+
 </RelativeLayout>

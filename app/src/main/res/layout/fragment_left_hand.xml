@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="right|bottom"
+        android:layout_gravity="left|bottom"
         android:background="#C9C2C6">
 
         <Button
@@ -115,6 +115,43 @@
             android:id="@+id/l_rollText"
             android:layout_below="@+id/lh_roll_btn"
             android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Pitch"
+            android:id="@+id/textView"
+            android:layout_marginBottom="93dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/PitchValtextView"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toEndOf="@+id/l_fwBackText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Roll"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/PitchValtextView"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/RollValTextView"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_alignStart="@+id/PitchValtextView" />
         <!--
         <Button
             android:layout_width="wrap_content"
