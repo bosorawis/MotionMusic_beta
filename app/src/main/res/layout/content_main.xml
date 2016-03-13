@@ -71,4 +71,13 @@
         android:layout_alignEnd="@+id/linearLayout"
         android:checked="false" />
 
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only log step"
+        android:id="@+id/stepSwitch"
+        android:layout_above="@+id/logSwitch"
+        android:layout_alignEnd="@+id/logSwitch"
+        android:checked="false" />
+
 </RelativeLayout>
